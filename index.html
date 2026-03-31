@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mugridge Studios</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loginScreen">
+  <div class="box">
+    <h2>Mugridge Studios</h2>
+    <input id="username" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+    <button onclick="signup()">Sign Up</button>
+    <button onclick="login()">Login</button>
+  </div>
+</div>
+
+<div class="sidebar">
+  <h2>Mugridge</h2>
+  <p onclick="showPage('dashboard')">Dashboard</p>
+  <p onclick="showPage('courses')">Courses</p>
+  <p onclick="showPage('editor')">Editor</p>
+  <p onclick="showPage('ai')">AI Helper</p>
+</div>
+
+<div class="main">
+
+<div id="dashboard" class="card">
+  <h3>Dashboard</h3>
+  <p id="progress">Progress: 0%</p>
+</div>
+
+<div id="courses" class="card hidden">
+  <h3>Courses</h3>
+  <button onclick="completeLesson()">Complete Lesson</button>
+</div>
+
+<div id="editor" class="card hidden">
+  <h3>Code Editor</h3>
+  <textarea id="code">console.log("Hello World")</textarea>
+  <button onclick="runCode()">Run</button>
+  <div id="output"></div>
+</div>
+
+<div id="ai" class="card hidden">
+  <h3>AI Helper</h3>
+  <input id="aiInput" placeholder="Ask something...">
+  <button onclick="askAI()">Ask</button>
+  <p id="aiOutput"></p>
+</div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
